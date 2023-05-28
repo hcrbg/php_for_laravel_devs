@@ -7,11 +7,16 @@ use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
-
-    public function index()
+    // CRUD ->
+    // CREATE -> create (formulari) store POST
+    // RETRIEVE -> LIST (index) i SHOW (mostra un item)
+    // UPDATE -> edit (formulari) -> update -> POST del formulari edició
+    // DELETE -> destroy
+    // REST API -> tubeme.acacha.org/http
+    public function index ()
     {
-        return view('tasks', [
-            'tasks' => Task::all()
+        return view('tasks',[
+            'tasks'=> Task::all()
         ]);
     }
 }
